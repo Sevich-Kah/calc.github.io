@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;
+400&family=Kumbh+Sans&family=League+Spartan:wght@700&family=Overpass:wght@100&family=Roboto:wght@300;400&family=
+Rubik:wght@300&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="styles.css"></link>
+<body id="body">
+  <div class="overall">
+    <div class="top">
+      <p id="text1">calc</p>
+      <h1 id="text2">theme</h1>
+      <div class="selectors" id="selectors">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+      </div>
+      <div class="theme">
+        <div class="choose">
+          <div class="circle one" id="theme1" onclick="themeOne()"></div>
+          <div class="circle two" id="theme2" onclick="themeTwo()" tabindex="0"></div>
+          <div class="circle three" id="theme3" onclick="themeThree()"></div>
+        </div>
+      </div>
+    </div>
+    <input type="text" class="display" id="display" disabled>
+    <div class="all" id="calculator">
+      <div class="numshow">
+        <button onclick="appendDigit('7')" class="number">7</button>
+        <button onclick="appendDigit('8')" class="number">8</button>
+        <button onclick="appendDigit('9')" class="number">9</button>
+        <button onclick="deletePrevious()" class="del" id="colt">del</button>
+        <button onclick="appendDigit('4')" class="number">4</button>
+        <button onclick="appendDigit('5')" class="number">5</button>
+        <button onclick="appendDigit('6')" class="number">6</button>
+        <button onclick="appendOperator('+')" class="number">+</button>
+        <button onclick="appendDigit('1')" class="number">1</button>
+        <button onclick="appendDigit('2')" class="number">2</button>
+        <button onclick="appendDigit('3')" class="number">3</button>
+        <button onclick="appendOperator('-')" class="number">-</button>
+        <button onclick="appendDecimal()" class="number">.</button>
+        <button onclick="appendDigit('0')" class="number">0</button>
+        <button onclick="appendOperator('/')" class="number">/</button>
+        <button onclick="appendOperator('*')" class="number">x</button>
+        <button onclick="clearDisplay()" id="clear" class="reset">reset</button>
+        <button onclick="calculateResult()" class="answer" id="answer">=</button>
+
+      </div>
+    </div>
+  </div>
+  <script src="jascript.js"></script>
+</body>
+</html>
